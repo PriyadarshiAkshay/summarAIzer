@@ -1,4 +1,4 @@
-# Get exoplanet papers from arXiv with specific keywords
+# Get research papers from arXiv with specific keywords
 import arxiv
 import requests
 import pypdf
@@ -12,9 +12,7 @@ import warnings
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_filtered_exoplanet_papers(max_results=10,keywords=["demographics"]):
-    # Define the search query
-    base_query = "exoplanet"
+def get_filtered_research_papers(base_query,max_results=10,keywords=["demographics"]):
 
     # Create a combined query string
     keyword_query = " OR ".join(keywords)
@@ -70,7 +68,7 @@ def summarize_paper(model, prompt, custom_instructions, paper_text):
         logging.error(f"Failed to generate summary: {e}")
         return None
     
-def main(keywords, max_results=5, used_model='gemini-1.5-flash', API_KEY=None):
+def main(base_query, keywords, max_results=5, used_model='gemini-1.5-flash', API_KEY=None):
     if keywords is None:
         keywords = ["demographics"]
 
@@ -83,8 +81,8 @@ def main(keywords, max_results=5, used_model='gemini-1.5-flash', API_KEY=None):
     # Suppress specific warnings
     warnings.filterwarnings("ignore", category=UserWarning)
     
-    # Call the function to retrieve filtered exoplanet papers
-    paper_collection=get_filtered_exoplanet_papers(max_results=max_results,keywords=keywords)
+    # Call the function to retrieve filtered research papers
+    paper_collection=get_filtered_research_papers(base_query,max_results=max_results,keywords=keywords)
 
     if API_KEY is None:
         API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -96,7 +94,7 @@ def main(keywords, max_results=5, used_model='gemini-1.5-flash', API_KEY=None):
     # Custom instructions for the model, idea from Complexity discord.
     with open('prompt.txt', 'r') as f:
         prompt=f.read()
-    custom_instructions = "You are an expert in exoplanet. Summarise this paper in 10 bullet points. Do not hallucinate."
+    custom_instructions = "You are an expert in "+ base_query+". Summarise this paper in 10 bullet points. Do not hallucinate."
 
 
     for p in paper_collection:

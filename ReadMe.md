@@ -1,10 +1,10 @@
-# 📚 SummarAIzer: AI-Powered Exoplanet Paper Summarizer
+# 📚 SummarAIzer: AI-Powered Research Paper Summarizer
 
-SummarAIzer is a powerful tool that leverages AI to fetch, process, and summarize recent exoplanet research papers from arXiv. It's designed to help researchers and enthusiasts stay up-to-date with the latest developments in exoplanet science.
+SummarAIzer is a powerful tool that leverages AI to fetch, process, and summarize recent research papers from arXiv. It's designed to help researchers and enthusiasts stay up-to-date with the latest developments in science.
 
 ## 🌟 Features
 
-- 🔍 Searches arXiv for recent exoplanet papers based on keywords
+- 🔍 Searches arXiv for recent papers based on keywords
 - 📥 Downloads and extracts text from PDF papers
 - 🤖 Uses Google's Gemini AI to generate concise summaries
 - 📊 Supports multiple Gemini models for flexibility
@@ -24,6 +24,7 @@ SummarAIzer is a powerful tool that leverages AI to fetch, process, and summariz
    import summarAIzer as sa
 
    sa.main(
+       base_query='exoplanet',
        keywords=['demographics'],
        max_results=5,
        used_model='gemini-1.5-flash',
@@ -33,6 +34,7 @@ SummarAIzer is a powerful tool that leverages AI to fetch, process, and summariz
 
 ## 🛠️ Configuration
 
+-`base_query`: Field to search (eg: `'exoplanets'`)
 - `keywords`: List of keywords to filter papers (default: `['demographics']`)
 - `max_results`: Maximum number of papers to process (default: 5)
 - `used_model`: Gemini model to use (default: 'gemini-1.5-flash')
