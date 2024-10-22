@@ -1,6 +1,6 @@
-# 📚 SummarAIzer: AI-Powered Research Paper Summarizer
+# 📚 summarAIzer: AI-Powered Research Paper Summarizer
 
-SummarAIzer is a powerful tool that leverages AI to fetch, process, and summarize recent research papers from arXiv. It's designed to help researchers and enthusiasts stay up-to-date with the latest developments in science.
+summarAIzer is a powerful tool that leverages AI to fetch, process, and summarize recent research papers from arXiv. It's designed to help researchers and enthusiasts stay up-to-date with the latest developments in science.
 
 ## 🌟 Features
 
@@ -42,7 +42,7 @@ SummarAIzer is a powerful tool that leverages AI to fetch, process, and summariz
 
 ## 📝 Output
 
-For each paper, SummarAIzer will print:
+For each paper, summarAIzer will print:
 - Title
 - Authors
 - A 10-point summary of the paper's key findings
