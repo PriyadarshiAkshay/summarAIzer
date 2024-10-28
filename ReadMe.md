@@ -1,12 +1,13 @@
 # 📚 summarAIzer: AI-Powered Research Paper Summarizer
 
-summarAIzer is a powerful tool that leverages AI to fetch, process, and summarize recent research papers from arXiv. It's designed to help researchers and enthusiasts stay up-to-date with the latest developments in science.
+summarAIzer is a powerful tool that leverages AI to fetch, process, and summarize recent research papers from arXiv. It's designed to help researchers and enthusiasts stay up-to-date with the latest developments in science. It rechecks its output to assign a confidence score on the summary to help with hallucination or inaccurate information.
 
 ## 🌟 Features
 
 - 🔍 Searches arXiv for recent papers based on keywords
 - 📥 Downloads and extracts text from PDF papers
 - 🤖 Uses Google's Gemini AI to generate concise summaries
+- 🤖 Uses AI as a judge to check inaccuracies in the summary.
 - 📊 Supports multiple Gemini models for flexibility
 - 🎨 Presents results in a clean, readable format
 
@@ -34,7 +35,7 @@ summarAIzer is a powerful tool that leverages AI to fetch, process, and summariz
 
 ## 🛠️ Configuration
 
--`base_query`: Field to search (eg: `'exoplanets'`)
+- `base_query`: Field to search (eg: `'exoplanets'`)
 - `keywords`: List of keywords to filter papers (default: `['demographics']`)
 - `max_results`: Maximum number of papers to process (default: 5)
 - `used_model`: Gemini model to use (default: 'gemini-1.5-flash')
