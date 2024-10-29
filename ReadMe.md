@@ -18,7 +18,7 @@ summarAIzer is a powerful tool that leverages AI to fetch, process, and summariz
    pip install arxiv requests pypdf google-generativeai
    ```
 
-2. Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+2. Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 
 3. Run the script:
    ```python
@@ -35,33 +35,33 @@ summarAIzer is a powerful tool that leverages AI to fetch, process, and summariz
 
 ## Example Output
 
-### Title: Reading Between the Rainbows: Comparative Exoplanet Characterisation through Molecule Agnostic Spectral Clustering
-Authors: Ilyana A. Guez, Mark Claire
+>### Title: Reading Between the Rainbows: Comparative Exoplanet Characterisation through Molecule Agnostic Spectral Clustering
+>Authors: Ilyana A. Guez, Mark Claire
+>
+>### Summary Analysis: 
+>
+>**Reasonably supported bullet points:**
+>
+>* **The paper presents a new method for characterizing exoplanet atmospheres called "Molecule Agnostic Spectral Clustering" (MASC).** [Accuracy: 5/5]
+>* **The study uses 42 synthetic transit transmission spectra from the Virtual Planetary Laboratory Spectral Explorer (VPLSE).** [Accuracy: 5/5]
+>* **The spectra are divided into bands, and the enclosed areas within these bands are compared to find patterns.** [Accuracy: 5/5]
+>* **The HDBSCAN clustering algorithm is used to identify clusters in the data based on density.** [Accuracy: 5/5]
+>* **The method was tested with different resolutions, and it was found that a resolving power of R∼similar-to\sim∼300 is necessary for useful results.** [Accuracy: 5/5]
+>* **MASC successfully identifies clusters that correlate with atmospheric composition, such as the presence of CO2 and O2.** [Accuracy: 5/5]
+>* **The method can also be used to estimate the ratio of O2 to CO2 in an exoplanet's atmosphere.** [Accuracy: 5/5]
+>* **The authors test MASC by analyzing an unknown spectrum, accurately identifying it as a dry O2 atmosphere similar to Earth's.** [Accuracy: 5/5]
+>* **The study concludes that MASC shows promise as a new method for characterizing exoplanet atmospheres, especially with future advancements in telescope technology.** [Accuracy: 5/5] 
+>
+>**Doubtful bullet points:**
+>
+>* **MASC focuses on identifying patterns in spectral features without relying on specific molecular signatures.** [Accuracy: 3/5]  The paper states it's "agnostic" but does analyze specific molecules like CO2 and O2 in its correlations. 
+>* **The method was tested with different resolutions, and it was found that a resolving power of R∼similar-to\sim∼300 is necessary for useful results.** [Accuracy: 3/5] While the paper mentions testing at different resolutions, it doesn't explicitly state that R∼similar-to\sim∼300 is the "necessary" resolution. 
+>
+>
+>**Confidence score:** 85%
+>
+>**Reason:** The summary accurately reflects the main points of the paper, including the method, its application, and the results. However, the two statements concerning the method's focus and the "necessary" resolution are somewhat inaccurate, implying a stronger statement than the paper provides. 
 
-### Summary Analysis: 
-
-**Reasonably supported bullet points:**
-
-* **The paper presents a new method for characterizing exoplanet atmospheres called "Molecule Agnostic Spectral Clustering" (MASC).** [Accuracy: 5/5]
-* **The study uses 42 synthetic transit transmission spectra from the Virtual Planetary Laboratory Spectral Explorer (VPLSE).** [Accuracy: 5/5]
-* **The spectra are divided into bands, and the enclosed areas within these bands are compared to find patterns.** [Accuracy: 5/5]
-* **The HDBSCAN clustering algorithm is used to identify clusters in the data based on density.** [Accuracy: 5/5]
-* **The method was tested with different resolutions, and it was found that a resolving power of R∼similar-to\sim∼300 is necessary for useful results.** [Accuracy: 5/5]
-* **MASC successfully identifies clusters that correlate with atmospheric composition, such as the presence of CO2 and O2.** [Accuracy: 5/5]
-* **The method can also be used to estimate the ratio of O2 to CO2 in an exoplanet's atmosphere.** [Accuracy: 5/5]
-* **The authors test MASC by analyzing an unknown spectrum, accurately identifying it as a dry O2 atmosphere similar to Earth's.** [Accuracy: 5/5]
-* **The study concludes that MASC shows promise as a new method for characterizing exoplanet atmospheres, especially with future advancements in telescope technology.** [Accuracy: 5/5] 
-
-**Doubtful bullet points:**
-
-* **MASC focuses on identifying patterns in spectral features without relying on specific molecular signatures.** [Accuracy: 3/5]  The paper states it's "agnostic" but does analyze specific molecules like CO2 and O2 in its correlations. 
-* **The method was tested with different resolutions, and it was found that a resolving power of R∼similar-to\sim∼300 is necessary for useful results.** [Accuracy: 3/5] While the paper mentions testing at different resolutions, it doesn't explicitly state that R∼similar-to\sim∼300 is the "necessary" resolution. 
-
-
-**Confidence score:** 85%
-
-**Reason:** The summary accurately reflects the main points of the paper, including the method, its application, and the results. However, the two statements concerning the method's focus and the "necessary" resolution are somewhat inaccurate, implying a stronger statement than the paper provides. 
- 
 
 ## 🛠️ Configuration
 
