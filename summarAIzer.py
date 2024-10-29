@@ -132,6 +132,44 @@ def crosscheck_summary(model, summary, paper_text):
     except Exception as e:
         logging.error(f"Failed to crosscheck summary: {e}")
         return None
+def summarize_from_url(url,base_query='exoplanets', used_model='gemini-1.5-flash', API_KEY=None):
+    
+    # Suppress specific warnings
+    warnings.filterwarnings("ignore", category=UserWarning)
+    
+    if API_KEY is None:
+        API_KEY = os.environ.get("GEMINI_API_KEY")
+    configure_genai(API_KEY)
+
+    logging.info(f"Using model {used_model}")
+    model = genai.GenerativeModel(used_model)
+
+    # Custom instructions for the model, idea from Complexity discord.
+    with open('prompt.txt', 'r') as f:
+        prompt=f.read()
+    custom_instructions = "You are an expert in "+ base_query+". Summarise this paper in 10 bullet points. Do not hallucinate."
+
+
+    
+    if 'html' in url:
+        html_url=url#[:17]+'html'+p.pdf_url[20:]
+        pdf_text = get_html_text(html_url)
+
+        extra_instructions="The paper is provided as text extracted from html. Check the formatting carefully.  The contents of the paper are:\n\n"
+    else:
+        pdf_text = extract_text_from_pdf(url)
+        extra_instructions="The paper is provided as text extracted from pdf file. Check the formatting carefully.  The contents of the paper are:\n\n"
+        
+
+        summary = summarize_paper(model, prompt, custom_instructions, extra_instructions + pdf_text)
+        
+        if summary:
+            verification_result = crosscheck_summary(model, summary, pdf_text)
+            #print(summary)
+            #print("\nVerification Results:")
+            #display(Markdown("### Summary\n" + summary))
+            display(Markdown(verification_result))
+            print("=" * 80)
 
 def main(base_query, keywords, max_results=5, used_model='gemini-1.5-flash', API_KEY=None):
     if keywords is None:
