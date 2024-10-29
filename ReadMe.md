@@ -34,7 +34,7 @@ summarAIzer is a powerful tool that leverages AI to fetch, process, and summariz
    ```
 
 ## Example Output
-```
+
 ### Title: Reading Between the Rainbows: Comparative Exoplanet Characterisation through Molecule Agnostic Spectral Clustering
 Authors: Ilyana A. Guez, Mark Claire
 
@@ -61,8 +61,7 @@ Authors: Ilyana A. Guez, Mark Claire
 **Confidence score:** 85%
 
 **Reason:** The summary accurately reflects the main points of the paper, including the method, its application, and the results. However, the two statements concerning the method's focus and the "necessary" resolution are somewhat inaccurate, implying a stronger statement than the paper provides. 
-
-```   
+ 
 
 ## 🛠️ Configuration
 
