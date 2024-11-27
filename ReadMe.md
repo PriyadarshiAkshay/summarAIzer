@@ -1,6 +1,6 @@
-# 📚 summarAIzer: AI-Powered Research Paper Summarizer
+# 📚 summarAIzer: Search & Summarize Academic Research
 
-summarAIzer is a powerful tool that leverages AI to fetch, process, and summarize recent research papers from arXiv. It's designed to help researchers and enthusiasts stay up-to-date with the latest developments in science. It rechecks its output to assign a confidence score on the summary to help with hallucination or inaccurate information.
+AI-powered research assistant that searches and summarizes academic papers using RAG (Retrieval Augmented Generation). Fetches real-time data from arXiv, cross-verifies information, and delivers accurate summaries to keep researchers informed of latest scientific developments.
 
 ## 🌟 Features
 
@@ -15,7 +15,8 @@ summarAIzer is a powerful tool that leverages AI to fetch, process, and summariz
 
 1. Install the required dependencies:
    ```
-   pip install arxiv requests pypdf google-generativeai
+   pip install arxiv requests pypdf google-generativeai faiss-cpu sentence_transformers
+
    ```
 
 2. Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikey).

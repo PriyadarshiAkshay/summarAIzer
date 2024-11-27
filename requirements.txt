@@ -1,0 +1,9 @@
+faiss-cpu>=1.7.4
+arxiv
+requests
+pypdf
+google-generativeai
+beautifulsoup4
+ipython
+sentence-transformers
+numpy
